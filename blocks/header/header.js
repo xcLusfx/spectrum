@@ -221,9 +221,9 @@ export default async function decorate(block) {
 
   /* custom */
   const navSectionsEl = navWrapper.querySelector('.nav-sections .default-content-wrapper');
-  navSectionsEl.innerHTML = `
+  navSectionsEl.insertAdjacentHTML('afterbegin', `
     <div class="page-type"><span>Residential</span><span>Business</span></div>
-  ` + navSectionsEl.innerHTML;
+  `);
 
   const topNav = navWrapper.querySelector('nav .section:last-of-type');
   topNav.classList.add('top-nav');
