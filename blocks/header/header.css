@@ -342,6 +342,7 @@ header .nav-wrapper {
     padding: 0;
     background: transparent;
     border-radius: unset;
+		text-transform: capitalize;
 	}
 
 	header .section.top-nav .button-container a:hover {

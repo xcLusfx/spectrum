@@ -39,6 +39,33 @@
   }
 }
 
+/* default */
+.columns.default {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 16px;
+}
+
+.columns.default > div > div:not(.columns-img-col) p {
+  margin: 0;
+}
+
+.columns.default > div > div:not(.columns-img-col) p:first-of-type {
+  color: #00629b;
+  font-size: 24px;
+  letter-spacing: 2.4px;
+}
+
+.columns.default > div > div:not(.columns-img-col) h3 {
+  color: #333;
+  font-size: 44px;
+  margin: 0;
+}
+
+.columns.default > div > div:not(.columns-img-col) p.button-container {
+  margin-top: 2rem;
+}
+
 /* banner */
 .section.banner {
   padding: 0 32px;
