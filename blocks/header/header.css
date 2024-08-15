@@ -17,7 +17,7 @@ header .nav-wrapper {
 	  "hamburger brand tools" 86px
 	  "sections sections sections" 1fr / auto 1fr auto;
 	align-items: center;
-	gap: 0 2em;
+	gap: 0 5em;
 	margin: auto;
 	max-width: 1264px;
 	height: calc(var(--nav-height) - 36px);
@@ -189,6 +189,25 @@ header .nav-wrapper {
   header nav#nav .nav-sections ul > li > ul > li {
 	font-weight: 500;
   }
+
+	header nav#nav .nav-sections .page-type {
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+		margin-bottom: 5px;
+	}
+
+	header nav#nav .nav-sections .page-type span {
+		font-size: 16px;
+	}
+
+	header nav#nav .nav-sections .page-type span:first-of-type {
+		border-bottom: 2px solid #0099d8;
+	}
+
+	header nav#nav .nav-sections .page-type span:last-of-type {
+		color: grey;
+	}
   
   @media (width >= 900px) {
 	header nav#nav .nav-sections {

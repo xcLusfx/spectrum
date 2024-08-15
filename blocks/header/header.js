@@ -218,12 +218,20 @@ export default async function decorate(block) {
   navWrapper.className = 'header-nav-wrapper';
   navWrapper.append(nav);
 
+
+  /* custom */
+  const navSectionsEl = navWrapper.querySelector('.nav-sections .default-content-wrapper');
+  navSectionsEl.innerHTML = `
+    <div class="page-type"><span>Residential</span><span>Business</span></div>
+  ` + navSectionsEl.innerHTML;
+
   const topNav = navWrapper.querySelector('nav .section:last-of-type');
   topNav.classList.add('top-nav');
   const br = topNav.querySelector('br');
   br.remove();
   block.prepend(topNav);
   block.append(navWrapper);
+
 
   if (getMetadata('breadcrumbs').toLowerCase() === 'true') {
     navWrapper.append(await buildBreadcrumbs());
