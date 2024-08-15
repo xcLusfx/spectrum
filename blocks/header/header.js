@@ -207,8 +207,14 @@ export default async function decorate(block) {
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
   const navWrapper = document.createElement('div');
-  navWrapper.className = 'nav-wrapper';
+  navWrapper.className = 'header-nav-wrapper';
   navWrapper.append(nav);
+
+  const topNav = navWrapper.querySelector('nav .section:last-of-type');
+  topNav.classList.add('top-nav');
+  const br = topNav.querySelector('br');
+  br.remove();
+  block.prepend(topNav);
   block.append(navWrapper);
 
   if (getMetadata('breadcrumbs').toLowerCase() === 'true') {

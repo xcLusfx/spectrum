@@ -16,7 +16,7 @@ header .nav-wrapper {
 	gap: 0 2em;
 	margin: auto;
 	max-width: 1264px;
-	height: var(--nav-height);
+	height: calc(var(--nav-height) - 26px);
 	padding: 0 1rem;
 	font-family: var(--body-font-family);
   }
@@ -238,7 +238,8 @@ header .nav-wrapper {
 	header nav#nav .nav-sections .default-content-wrapper > ul > li {
 	  flex: 0 1 auto;
 	  position: relative;
-	  font-weight: 500;
+		font-weight: 800;
+		font-size: 18px;
 	}
   
 	header nav#nav .nav-sections .default-content-wrapper > ul > li > ul {
@@ -285,6 +286,40 @@ header .nav-wrapper {
 	padding: 10px;
 	margin: 0;
   }
+
+	/* top nav */
+	header .section.top-nav {
+		background-color: #001b33;
+	}
+
+	header .section.top-nav p {
+		margin: 0;
+		display: flex;
+    align-items: center;
+		padding: 3px 0;
+	}
+
+	header .section.top-nav .default-content-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		color: #fff;
+		font-size: 16px;
+		font-weight: 800;
+		gap: 15px;
+	}
+
+	header .section.top-nav .button-container a {
+		margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: unset;
+	}
+
+	header .section.top-nav .button-container a:hover {
+		text-decoration: underline;
+	}
   
   /* breadcrumbs */
   header .breadcrumbs {
