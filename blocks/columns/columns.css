@@ -1,6 +1,6 @@
 .columns > div {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 .columns img {
@@ -13,6 +13,7 @@
 
 .columns > div > .columns-img-col {
   order: 0;
+  margin-top: 2rem;
 }
 
 .columns > div > .columns-img-col img {
@@ -26,8 +27,118 @@
     gap: 32px;
   }
 
-  .columns > div > div {
-    flex: 1;
+  .columns > div > div:not(.columns-img-col) {
+    width: 50%;
     order: unset;
+    padding-left: 12.5%;
+    box-sizing: border-box;
+  }
+
+  .columns > div > .columns-img-col {
+    width: 50%;
+    margin-top: 0;
+  }
+}
+
+/* banner */
+.section.banner {
+  padding: 0 32px;
+  background-color: #F5F5F5;
+  background-image: url('/images/columns-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: inherit;
+}
+
+.section.banner .columns-wrapper {
+  max-width: unset;
+}
+
+.columns.banner {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.columns.banner br {
+  display: none;
+}
+
+.columns.banner > div {
+  flex: 1;
+}
+
+.columns.banner > div > div p {
+  margin: 0;
+}
+
+.columns.banner > div > div > p:first-of-type {
+  color: #00629b;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: .1em;
+}
+
+.columns.banner > div > div > p:nth-child(3) {
+  font-size: 18px;
+  color: #333;
+}
+
+.columns.banner > div > div > p:nth-child(4) {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 800;
+  margin-top: 2rem;
+
+}
+
+.columns.banner > div > div > p:nth-child(5) {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.columns.banner > div > div > p:nth-child(5) strong {
+  font-size: 92px;
+  line-height: 1;
+}
+
+.columns.banner > div > div > p:nth-child(6) {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.columns.banner > div > div > p:nth-child(6) a {
+  background: #0099d8;
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-right: 0.5rem;
+}
+
+.columns.banner > div > div > p:nth-child(6) a:hover {
+  box-shadow: 0 .3rem .6rem rgba(0, 0, 0, .16);
+  background: #0082bf;
+  text-decoration: none;
+}
+
+.columns.banner > div > div > h3 {
+  font-size: 52px;
+  color: #333;
+  margin: 0;
+  max-width: 355px;
+}
+
+@media (width <= 900px) {
+  .section.banner {
+    padding: 0 16px;
+  }
+
+  .columns.banner > div > div > h3 {
+    max-width: 100%;
   }
 }
