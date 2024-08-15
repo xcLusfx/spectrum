@@ -16,7 +16,7 @@ header .nav-wrapper {
 	gap: 0 2em;
 	margin: auto;
 	max-width: 1264px;
-	height: calc(var(--nav-height) - 26px);
+	height: calc(var(--nav-height) - 36px);
 	padding: 0 1rem;
 	font-family: var(--body-font-family);
   }
