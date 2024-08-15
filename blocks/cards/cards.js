@@ -2,6 +2,7 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
   const isJSON = block.classList.contains('is-json');
+  const isInternetSpeed = block.classList.contains('internet-speed');
   const link = block.querySelector('a'); 
 
   async function fetchJson(link) {
@@ -17,24 +18,26 @@ export default async function decorate(block) {
 
   const ul = document.createElement('ul');
 
-	[...block.children].forEach((row) => {
-		const anchor = document.createElement('a');
-		anchor.href = '';
-		const li = document.createElement('li');
-		while (row.firstElementChild) li.append(row.firstElementChild);
-		[...li.children].forEach((div) => {
+  [...block.children].forEach((row) => {
+    const anchor = document.createElement(isInternetSpeed ? 'div' : 'a');
+    if (!isInternetSpeed) anchor.href = '';
+    
+    const li = document.createElement('li');
+    while (row.firstElementChild) li.append(row.firstElementChild);
+    
+    [...li.children].forEach((div) => {
+        if (div.children.length === 1 && div.querySelector('picture')) {
+            div.className = 'cards-card-image';
+        } else if (div.children.length === 1 && div.querySelector('span')) {
+            div.className = 'cards-card-icon';
+        } else {
+            div.className = 'cards-card-body';
+        }
+    });
 
-		if (div.children.length === 1 && div.querySelector('picture')) {
-			div.className = 'cards-card-image';
-		} else if (div.children.length === 1 && div.querySelector('span')) {
-			div.className = 'cards-card-icon';
-		} else {
-			div.className = 'cards-card-body';
-		}
-		});
-		anchor.append(li);
-		ul.append(anchor);
-	});
+    anchor.append(li);
+    ul.append(anchor);
+});
   
   if (isJSON) {
     const cardData = await fetchJson(link);

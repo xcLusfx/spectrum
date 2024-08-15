@@ -138,28 +138,19 @@ a:hover {
 
 /* buttons */
 a.button:any-link, button {
-  font-family: var(--body-font-family);
-  display: inline-block;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
-  text-align: center;
-  font-style: normal;
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: 16px 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 30px;
+  background: #0099d8;
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-right: 0.5rem;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
+  box-shadow: 0 .3rem .6rem rgba(0, 0, 0, .16);
+  background: #0082bf;
+  text-decoration: none;
 }
 
 button:disabled, button:disabled:hover {
@@ -191,18 +182,18 @@ main img {
 }
 
 /* sections */
-main .section {
+main .section:not(.columns-container) {
   padding: 64px 16px;
 }
 
 @media (width >= 600px) {
-  main .section {
+  main .section:not(.columns-container) {
     padding: 64px 32px;
   }
 }
 
 @media (width >= 900px) {
-  .section > div {
+  .section:not(.columns-container) > div {
     max-width: 1200px;
     margin: auto;
   }
@@ -212,6 +203,24 @@ main .section {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+main .section > .default-content-wrapper {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+main .section > .default-content-wrapper h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+main .section > .default-content-wrapper p {
+  line-height: normal;
+  font-weight: 400;
+  margin: 0;
 }
 
 /* Experimentation Widget Styling */

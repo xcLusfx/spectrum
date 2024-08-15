@@ -30,7 +30,6 @@
   .columns > div > div:not(.columns-img-col) {
     width: 50%;
     order: unset;
-    padding-left: 12.5%;
     box-sizing: border-box;
   }
 
@@ -133,6 +132,10 @@
   max-width: 355px;
 }
 
+.columns.banner > div > div:not(.columns-img-col) {
+  padding-left: 12.5%;
+}
+
 @media (width <= 900px) {
   .section.banner {
     padding: 0 16px;
@@ -141,4 +144,78 @@
   .columns.banner > div > div > h3 {
     max-width: 100%;
   }
+
+  .columns.banner > div > div:not(.columns-img-col) {
+    padding-left: 0;
+  }
+}
+
+/* teaser */
+.columns.teaser > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.columns.teaser {
+  background-image: url('/images/teaser-one-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: inherit;
+  padding: 0 16px;
+}
+
+.columns.teaser .columns-img-col {
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+  margin-top: 0;
+}
+
+.columns.teaser .columns-img-col img {
+  max-height: 150px;
+  width: auto;
+}
+
+.columns.teaser > div > div h3 {
+  font-size: 28px;
+}
+
+.columns.teaser > div > div p {
+  margin: 0;
+  line-height: normal;
+  font-size: 18px;
+  max-width: 600px;
+}
+
+.columns.teaser > div > div:not(.columns-img-col) {
+  width: 60%;
+  color: #000;
+  padding: 1.5rem 0;
+}
+
+.columns.teaser > div > div:not(.columns-img-col) a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.columns.teaser > div > div:not(.columns-img-col) h3 {
+  margin-top: 0;
+}
+
+.columns.teaser.disney {
+  background-image: url('/images/disney-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: inherit;
+}
+
+.columns.teaser.disney > div > div:not(.columns-img-col) {
+  color: #fff;
+}
+
+.columns.teaser.disney > div > div:not(.columns-img-col) a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 900;;
 }
