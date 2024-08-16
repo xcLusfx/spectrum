@@ -162,6 +162,17 @@
 
 .cards.internet-speed > ul > div > li .cards-card-body:last-of-type ul li {
   font-size: 18px;
+  position: relative;
+  list-style: none;
+  text-align: left;
+  padding-left: 35px;
+}
+
+.cards.internet-speed > ul > div > li .cards-card-body:last-of-type ul li::before {
+  content: url('/icons/check.svg');
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /* services */
@@ -171,8 +182,14 @@
 }
 
 .cards.services > ul {
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   text-align: center;
+}
+
+.cards.services > ul a {
+  width: fit-content;
+  height: auto;
+  margin: 0 auto;
 }
 
 .cards.services > ul a li .cards-card-body a {
@@ -187,4 +204,34 @@
   box-shadow: unset;
   background: transparent;
   text-decoration: underline;
+}
+
+@media (width >= 768px) {
+  .columns > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 32px;
+  }
+
+  .columns > div > div:not(.columns-img-col) {
+    width: 50%;
+    order: unset;
+    box-sizing: border-box;
+  }
+
+  .columns > div > .columns-img-col {
+    width: 50%;
+    margin-top: 0;
+  }
+
+  .cards.services > ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    max-width: fit-content;
+    margin: 0 auto;
+  }
 }
