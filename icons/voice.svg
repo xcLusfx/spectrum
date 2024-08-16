@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-icon-voice-mediumblue">
+      <rect width="100" height="100"/>
+    </clipPath>
+  </defs>
+  <g id="icon-voice-mediumblue" clip-path="url(#clip-icon-voice-mediumblue)">
+    <g id="icon-voice-mediumblue-2" data-name="icon-voice-mediumblue">
+      <rect id="Rectangle_4666" data-name="Rectangle 4666" width="100" height="100" fill="rgba(255,255,255,0)"/>
+      <g id="Group_15090" data-name="Group 15090">
+        <g id="Group_15056" data-name="Group 15056" transform="translate(-785.877 -302.948)">
+          <path id="Union_94" data-name="Union 94" d="M0,57.933V28.8H11.007c0-7.4-.009-23.018,0-23.009-.046-6.24,5.35-5.786,5.35-5.786h9.451s5.4-.454,5.351,5.786c.01-.009,0,15.606,0,23.009H42.525V57.933ZM4.1,53.942H38.627V32.609H31.16V46.214s-.176,4.615-5.545,4.615l-.229,0-.94-.021v.021s-.386-.025-1.276-.043c-.79-.011-1.483-.016-2.085-.017s-1.294.006-2.084.017c-.89.018-1.277.043-1.277.043v-.021l-.94.021c-5.593.133-5.774-4.613-5.774-4.613V32.609H4.1Zm13.628-7.071h7.663s1.588.08,1.7-2.924,0-37.424,0-37.424-.229-2.456-3.423-2.376l-.094,0c-.231.008-1.1.036-2.484.034S18.832,4.158,18.6,4.15l-.094,0c-3.194-.08-3.422,2.542-3.422,2.542s-.112,34.254,0,37.258,1.7,2.924,1.7,2.924Z" transform="translate(814.875 323.949)" fill="#00629b"/>
+          <g id="Group_15054" data-name="Group 15054" transform="translate(831.876 335.026)">
+            <g id="Group_15089" data-name="Group 15089" transform="translate(0.5 -1)">
+              <ellipse id="Ellipse_4" data-name="Ellipse 4" cx="1.33" cy="1.328" rx="1.33" ry="1.328" transform="translate(2 22.554)" fill="#00629b"/>
+              <path id="Path_8" data-name="Path 8" d="M609.106,211.356a1.328,1.328,0,1,0,1.33,1.328A1.329,1.329,0,0,0,609.106,211.356Z" transform="translate(-605.776 -184.658)" fill="#00629b"/>
+              <ellipse id="Ellipse_5" data-name="Ellipse 5" cx="1.33" cy="1.328" rx="1.33" ry="1.328" transform="translate(2 30.844)" fill="#00629b"/>
+            </g>
+            <path id="Path_9" data-name="Path 9" d="M603.092,154.241h5.982v-2.3h-5.982Z" transform="translate(-602.083 -151.936)" fill="#00629b"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

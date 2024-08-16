@@ -20,7 +20,7 @@ export default async function decorate(block) {
 
   [...block.children].forEach((row) => {
     const anchor = document.createElement(isInternetSpeed ? 'div' : 'a');
-    if (!isInternetSpeed) anchor.href = '';
+    if (!isInternetSpeed) anchor.href = link?.href;
     
     const li = document.createElement('li');
     while (row.firstElementChild) li.append(row.firstElementChild);

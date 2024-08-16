@@ -12,12 +12,15 @@
   background-color: var(--background-color)
 }
 
-/* .cards .cards-card-body {
-  margin: 16px;
-} */
-
 .cards .cards-card-image {
   line-height: 0;
+}
+
+
+.cards .cards-card-body {
+  color: #000;
+  background-color: #fff;
+  text-align: center;
 }
 
 .cards .cards-card-body > *:first-child {
@@ -30,11 +33,78 @@
   object-fit: cover;
 }
 
-/* internet-speed */
-.cards.internet-speed {
-
+.cards a:hover {
+  text-decoration: none;
 }
 
+.cards:not(.internet-speed, .services) a {
+  display: flex;
+}
+
+.cards:not(.internet-speed, .services) a:hover {
+  box-shadow: 0 .3rem .6rem rgba(0, 0, 0, .16);
+}
+
+
+.cards:not(.internet-speed, .services) a > li {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards:not(.internet-speed, .services) a .cards-card-body {
+  flex: 1;
+  padding: 2rem;
+}
+
+.cards:not(.internet-speed, .services) a .cards-card-body p {
+  margin: 0;
+}
+
+.cards:not(.internet-speed, .services) a .cards-card-body p:first-of-type {
+  font-size: 18px;
+  font-weight: 900;
+  color: #00629b;
+  letter-spacing: 0.1rem;
+}
+
+.cards:not(.internet-speed, .services) a .cards-card-body p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.cards:not(.internet-speed, .services) a .cards-card-body p:nth-child(3) {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.cards:not(.internet-speed, .services) a .cards-card-body h4 {
+  margin-top: 0.25rem;
+}
+
+.cards:not(.internet-speed, .services) a .cards-card-body p.button-container {
+  margin-top: 1.5rem;
+}
+
+.cards:not(.internet-speed, .services) a .cards-card-body p.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards:not(.internet-speed, .services) a .cards-card-body p.button-container a {
+  padding: 0;
+  background-color: transparent;
+  color: #000;
+  font-size: 18px;
+}
+
+.cards:not(.internet-speed, .services) a .cards-card-body p.button-container a:hover {
+  box-shadow: unset;
+  background: transparent;
+  text-decoration: underline;
+}
+
+/* internet-speed */
 .cards.internet-speed > ul > div {
   text-align: center;
   border: 1px solid #ccc;
@@ -92,4 +162,29 @@
 
 .cards.internet-speed > ul > div > li .cards-card-body:last-of-type ul li {
   font-size: 18px;
+}
+
+/* services */
+.cards.services span.icon {
+  width: 125px;
+  height: 100px;
+}
+
+.cards.services > ul {
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  text-align: center;
+}
+
+.cards.services > ul a li .cards-card-body a {
+  padding: 0;
+  background-color: transparent;
+  color: #000;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.cards.services > ul a li .cards-card-body a:hover {
+  box-shadow: unset;
+  background: transparent;
+  text-decoration: underline;
 }
