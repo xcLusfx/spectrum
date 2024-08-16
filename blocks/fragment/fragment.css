@@ -11,3 +11,23 @@
 .fragment-wrapper > .section:last-of-type {
   padding-bottom: 0;
 }
+
+.legal-doc-fragment .default-content-wrapper {
+  text-align: left !important;
+  max-width: 100% !important;
+  font-size: 14px;
+}
+
+.legal-doc-fragment .default-content-wrapper p:nth-child(even) {
+  margin: 1rem 0;
+}
+
+.legal-doc-fragment .default-content-wrapper p a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.legal-doc-fragment .fragment-wrapper {
+  border-top: 1px solid #ccc;
+  padding: 2rem 0;
+}
