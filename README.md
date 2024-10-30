@@ -2,8 +2,8 @@
 
 
 ## Environments
-- Preview: Preview: https://main--spectrum--xcLusfx.aem.page/
-- Live: https://main--spectrum--xcLusfx.aem.live/
+- Preview: Preview: https://main--edsworkshop--xcLusfx.aem.page/
+- Live: https://main--edsworkshop--xcLusfx.aem.live/
 
 ## Installation
 
